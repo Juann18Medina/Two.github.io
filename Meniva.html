@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="two.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Two</title>
+</head>
+<body class="bg-gray-100 text-black">
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-300 shadow-sm">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <!-- Brand Name -->
+      <a href="#" class="text-3xl font-bold">Two</a>
+
+      <!-- Navigation Menu -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#" class="hover:text-gray-700">Inicio</a>
+        <a href="#" class="hover:text-gray-700">Servicios</a>
+        <a href="#" class="hover:text-gray-700">Nosotros</a>
+        <a href="#" class="hover:text-gray-700">Contacto</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-300">
+      <ul class="space-y-4 p-4">
+        <li><a href="#" class="hover:text-gray-700 text-black block">Inicio</a></li>
+        <li><a href="#" class="hover:text-gray-700 text-black block">Acerca de</a></li>
+        <li><a href="#" class="hover:text-gray-700 text-black block">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+
+  
+      <!-- Carousel Container -->
+  <div class="relative max-w-4xl mx-auto mt-10 h-[300px] bg-white border rounded-lg shadow-lg overflow-hidden">
+    <!-- Carousel Slides -->
+    <div id="carousel-slides" class="flex transition-transform duration-500 h-full">
+      <!-- Slide 1 -->
+      <div class="w-full flex-shrink-0 h-full">
+        <img src="Grand Theft Auto Car GIF by Curated Stance!.gif" alt="Slide 1" class="w-full h-full object-cover">
+      </div>
+      <!-- Slide 2 -->
+      <div class="w-full flex-shrink-0 h-full">
+        <img src="Toyota Frs GIF by Alienwithacamera.gif" alt="Slide 2" class="w-full h-full object-cover">
+      </div>
+      <!-- Slide 3 -->
+      <div class="w-full flex-shrink-0 h-full">
+        <img src="g3.gif" alt="Slide 3" class="w-full h-full object-cover">
+      </div>
+    </div>
+
+
+
+    <!-- Indicators -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <button data-index="0" class="indicator w-4 h-4 bg-gray-300 rounded-full hover:bg-gray-500"></button>
+      <button data-index="1" class="indicator w-4 h-4 bg-gray-300 rounded-full hover:bg-gray-500"></button>
+      <button data-index="2" class="indicator w-4 h-4 bg-gray-300 rounded-full hover:bg-gray-500"></button>
+    </div>
+
+    <!-- Controls -->
+    <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black text-white rounded-full p-2 hover:bg-gray-800">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black text-white rounded-full p-2 hover:bg-gray-800">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+
+
+
+  <div class="bg-gray-100 py-8 px-4">
+    <h2 class="text-2xl font-bold mb-6">Recomendados para ti</h2>
+  
+    <!-- Grid ajustado para 2 columnas por fila en móviles -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      <!-- Producto 1 -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <span class="text-xs text-white bg-red-500 px-2 py-1 rounded-full">Oferta</span>
+        <img src="reloj.png" alt="Moto 1" class="w-full h-40 object-contain my-2" />
+        <h3 class="text-gray-800 font-semibold text-sm">Reloj Inteligente Smartwatch Bluetooth Llamada For Alexa</h3>
+        <p class="text-gray-500 text-sm">Precio de contado</p>
+        <p class="text-red-600 text-lg font-bold">$416 <span class="line-through text-gray-400 text-sm">$ 700</span></p>
+      </div>
+  
+      <!-- Producto 2 -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <span class="text-xs text-white bg-red-500 px-2 py-1 rounded-full">Oferta</span>
+        <img src="camarozl1.png" alt="Moto 2" class="w-full h-40 object-contain my-2" />
+        <h3 class="text-gray-800 font-semibold text-sm">Camaro zl1 hot wheels</h3>
+        <p class="text-gray-500 text-sm">Precio de contado</p>
+        <p class="text-red-600 text-lg font-bold">$ 120 <span class="line-through text-gray-400 text-sm">$ 150</span></p>
+      </div>
+  
+      <!-- Producto 3 -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <span class="text-xs text-white bg-red-500 px-2 py-1 rounded-full">Oferta</span>
+        <img src="toyotas.jpg" alt="TV" class="w-full h-40 object-contain my-2" />
+        <h3 class="text-gray-800 font-semibold text-sm">Rapido y Furioso- Toyota Supra</h3>
+        <p class="text-gray-500 text-sm">Precio de contado</p>
+        <p class="text-red-600 text-lg font-bold">$ 499 <span class="line-through text-gray-400 text-sm">$ 699</span></p>
+      </div>
+  
+      <!-- Producto 4 -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <span class="text-xs text-white bg-red-500 px-2 py-1 rounded-full">Oferta</span>
+        <img src="playeraH.png" alt="Moto 3" class="w-full h-40 object-contain my-2" />
+        <h3 class="text-gray-800 font-semibold text-sm">Playera Personalizada De Collage Only You Novio</h3>
+        <p class="text-gray-500 text-sm">Precio de contado</p>
+        <p class="text-red-600 text-lg font-bold">$ 499 <span class="line-through text-gray-400 text-sm">$ 599 </span></p>
+      </div>
+  
+      <!-- Producto 5 -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <span class="text-xs text-white bg-red-500 px-2 py-1 rounded-full">Oferta</span>
+        <img src="audifonos.png" alt="Moto 4" class="w-full h-40 object-contain my-2" />
+        <h3 class="text-gray-800 font-semibold text-sm">Audífonos In-ear Bluetooth Inalámbricos Con Cancelación de Ruido</h3>
+        <p class="text-gray-500 text-sm">Precio de contado</p>
+        <p class="text-red-600 text-lg font-bold">$ 232 <span class="line-through text-gray-400 text-sm">$ 350</span></p>
+      </div>
+    </div>
+  </div>
+  
+ 
+
+</body>
+</html>
+
+  <script>
+    // Toggle Mobile Menu
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+
+    const carousel = document.getElementById('carousel-slides');
+    const indicators = document.querySelectorAll('.indicator');
+    let currentIndex = 0;
+
+    function updateCarousel(index) {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+      indicators.forEach((btn, i) => {
+        btn.classList.toggle('bg-gray-700', i === index);
+        btn.classList.toggle('bg-gray-300', i !== index);
+      });
+    }
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? indicators.length - 1 : currentIndex - 1;
+      updateCarousel(currentIndex);
+    });
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+      currentIndex = (currentIndex === indicators.length - 1) ? 0 : currentIndex + 1;
+      updateCarousel(currentIndex);
+    });
+
+    indicators.forEach((btn, index) => {
+      btn.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel(currentIndex);
+      });
+    });
+
+    // Initialize the carousel
+    updateCarousel(currentIndex);
+  </script>
+</body>
+</html>
